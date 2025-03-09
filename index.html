@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Prechu</title>
 </head>
 <body>
     <header role="banner">
@@ -12,15 +15,16 @@
             <span>"</span><p>Prechu</p>
         </div>
         <nav role="navigation">
-            <a href="javascript:void(0)" onclick="closeNav()" class="closeMenu">
+            <button class="openbtn" onclick="openNav()">
                 <img src="./images/greyMenu.png" alt="Menu Icon" class="menuIcon">
-            </a>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            </button>
+            <div class="ul" id="mySidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
         </nav>
     </header>
 
@@ -65,5 +69,15 @@
     <footer role="doc-endnote">
         <p>Copyright &copy; 2012-2013 cssauthor.com</p>
     </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0px";
+        }
+    </script>
 </body>
 </html>
